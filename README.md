@@ -49,7 +49,7 @@ The endpoint handles URLs differently based on the input source:
   }
   ```
 
-### Response
+### Response - not complete but will not matter since these calls will be on ios client to external api directly
 
 ```json
 {
@@ -102,12 +102,8 @@ Each track is stored in the `tracks` collection with the following structure. Th
 }
 ```
 
-Note: The Firestore document structure is designed to support real-time updates during the remixing process. As we develop the remixing features, we may:
-- Add new fields for additional audio effects
-- Remove unused metadata fields
-- Optimize the structure for real-time performance
-- Add fields for tracking remix history and versions
-- Track metadata change history if needed
+Note: The Firestore document structure is designed to support real-time updates during the remixing process. 
+Each time the user makes a change to the track being remixed, a new metadata object is created and saved in firestore. A background process will move old metadata to firebase and bring it back to firestore if needed. 
 
 ### Firebase Storage Structure
 
@@ -256,6 +252,9 @@ tracks/
 ```
 
 ### Questions to Ask
+Music.ai has different workflows. Do we want to give the users options to run jobs on different workflows?
+Once the link is shared do we want to allow the track to still be edited?
+
 
 
 
