@@ -35,14 +35,14 @@ The endpoint handles URLs differently based on the input source:
 - **Parameters**:
   ```json
   {
-    "prompt": "string",           // Text prompt for track generation
-    "duration": number,          // Duration in seconds (optional)
-    "temperature": number,       // Randomness in generation (0-1, optional)
+    "prompt": "string",         // Text prompt for track generation
+    "duration": number,         // Duration in seconds (optional)
+    "temperature": number,      // Randomness in generation (0-1, optional)
     "top_k": number,            // Number of top tokens to consider (optional)
     "top_p": number,            // Cumulative probability threshold (optional)
     "genre": "string",          // Genre specification (optional)
     "mood": "string",           // Mood specification (optional)
-    "instrumentation": "string", // Specific instruments to include (optional)
+    "instrumentation": "string",    // Specific instruments to include (optional)
     "bpm": number,              // Beats per minute (optional)
     "key": "string",            // Musical key (optional)
     "scale": "string"           // Musical scale (optional)
